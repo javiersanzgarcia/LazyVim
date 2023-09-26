@@ -14,7 +14,8 @@ return {
     {"LazyVim/LazyVim", opts = {colorscheme = "gruvbox"}},
 
     {"folke/tokyonight.nvim", lazy = true, opts = {style = "moon"}},
-
+    -- Configure Git conflict plugin
+    {"akinsho/git-conflict.nvim", version = "*", config = true},
     -- change trouble config
     {
         "folke/trouble.nvim",

@@ -70,7 +70,7 @@ return {
                     -- Whether window is focusable in normal way (with `wincmd`or mouse)
                     focusable = false,
                     -- Side to stick ('left' or 'right')
-                    side = 'right',
+                    side = 'left',
                     -- Whether to show count of multiple integration highlights
                     show_integration_count = true,
                     -- Total width
@@ -262,6 +262,97 @@ return {
                 end
             }
         }
+    }, {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        cmd = "Neotree",
+        keys = {
+            {
+                "<leader>fe",
+                function()
+                    require("neo-tree.command").execute({
+                        toggle = true,
+                        dir = require("lazyvim.util").get_root()
+                    })
+                end,
+                desc = "Explorer NeoTree (root dir)"
+            }, {
+                "<leader>fE",
+                function()
+                    require("neo-tree.command").execute({
+                        toggle = true,
+                        dir = vim.loop.cwd()
+                    })
+                end,
+                desc = "Explorer NeoTree (cwd)"
+            },
+            {
+                "<leader>e",
+                "<leader>fe",
+                desc = "Explorer NeoTree (root dir)",
+                remap = true
+            },
+            {
+                "<leader>E",
+                "<leader>fE",
+                desc = "Explorer NeoTree (cwd)",
+                remap = true
+            }
+        },
+        deactivate = function() vim.cmd([[Neotree close]]) end,
+        init = function()
+            if vim.fn.argc() == 1 then
+                local stat = vim.loop.fs_stat(vim.fn.argv(0))
+                if stat and stat.type == "directory" then
+                    require("neo-tree")
+                end
+            end
+        end,
+        opts = {
+            sources = {
+                "filesystem", "buffers", "git_status", "document_symbols"
+            },
+            open_files_do_not_replace_types = {
+                "terminal", "Trouble", "qf", "Outline"
+            },
+            filesystem = {
+                bind_to_cwd = false,
+                follow_current_file = {enabled = true},
+                use_libuv_file_watcher = true
+            },
+            window = {position = "right", mappings = {["<space>"] = "none"}},
+            default_component_configs = {
+                indent = {
+                    with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+                    expander_collapsed = "",
+                    expander_expanded = "",
+                    expander_highlight = "NeoTreeExpander"
+                }
+            }
+        },
+        config = function(_, opts)
+            require("neo-tree").setup(opts)
+            vim.api.nvim_create_autocmd("TermClose", {
+                pattern = "*lazygit",
+                callback = function()
+                    if package.loaded["neo-tree.sources.git_status"] then
+                        require("neo-tree.sources.git_status").refresh()
+                    end
+                end
+            })
+        end
+    }, {
+        "akinsho/git-conflict.nvim",
+            opts = {
+                default_mappings = true, -- disable buffer local mapping created by this plugin
+                default_commands = true, -- disable commands created by this plugin
+                disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
+                list_opener = 'copen', -- command or function to open the conflicts list
+                highlights = { -- They must have background color, otherwise the default color will be used
+                    incoming = 'DiffAdd',
+                    current = 'DiffText'
+                }
+            }
     }
 
 }
