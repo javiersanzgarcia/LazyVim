@@ -14,14 +14,14 @@ keymap("n", "<Leader>tv", ":botright vnew <Bar> :terminal<cr>")
 keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
 -- keymap("n", "<Leader>qq", ":q!<cr>", silent)
 
--- Toggle Tree 
+-- Toggle Tree
 
 keymap("n", "<leader>n", "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>",
        silent)
 
--- EOL & BOL
-keymap("n", '<S-right>', '$', silent)
-keymap("n", '<S-left>', '^', silent)
+-- EOL & BOL: Deactivate for new navigation Q y E 60% layout
+-- keymap("n", '<S-right>', '$', silent)
+-- keymap("n", '<S-left>', '^', silent)
 
 -- Move Lines
 
