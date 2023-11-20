@@ -2,7 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 -- https://www.lazyvim.org/keymaps
-
 local keymap = vim.keymap.set
 local silent = {silent = true}
 
@@ -41,8 +40,9 @@ keymap("n", '<A-down>', '<C-w>j', silent)
 keymap("n", '<A-up>', '<C-w>k', silent)
 keymap("n", '<A-right>', '<C-w>l', silent)
 
--- Copy all: :%y+
--- Duplicate line NVIM: yy p
+-- Split window
+keymap("n", "ss", ":split<Return>", opts)
+keymap("n", "sv", ":vsplit<Return>", opts)
 
 -- Format piece
 
@@ -58,15 +58,6 @@ keymap("n", "gr",
        "<cmd>lua vim.lsp.buf.references({ includeDeclaration = false })<CR>",
        silent)
 keymap("n", "<C-Space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
-
--- Minimap
-
--- keymap("n", "<Leader>m", MiniMap.open)
--- keymap("n", "<Leader>mc", MiniMap.close)
--- keymap("n", "<Leader>mf", MiniMap.toggle_focus)
--- keymap("n", "<Leader>mr", MiniMap.refresh)
--- keymap("n", "<Leader>ms", MiniMap.toggle_side)
--- keymap("n", "<Leader>mt", MiniMap.toggle)
 
 -- Telescope -> $ brew install ripgrep (engine search should be installed)
 
@@ -99,3 +90,16 @@ keymap("n", '<S-Tab>', ':bprev<CR>', silent)
 keymap("n", "gn", ":bn<CR>", silent)
 keymap("n", "gp", ":bp<CR>", silent)
 keymap("n", "<S-q>", ":BufferClose<CR>", silent)
+
+-- Increment/decrement
+keymap("n", "+", "<C-a>")
+keymap("n", "-", "<C-x>")
+
+-- Delete a word backwards
+keymap("n", "dw", 'vb"_d')
+
+-- Select all
+keymap("n", "<C-a>", "gg<S-v>G")
+
+-- New tab
+keymap("n", "te", ":tabedit<CR>")
