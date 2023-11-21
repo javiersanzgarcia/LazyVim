@@ -85,7 +85,7 @@ keymap("n", "<Leader>pw",
        "<CMD>lua require('telescope.builtin').grep_string({ initial_mode = 'normal' })<CR>")
 
 -- Buffers
-keymap("n", '<Tab>', ':bnext<CR>', silent)
+-- Remove conflict with Copilot keymap("n", '<Tab>', ':bnext<CR>', silent)
 keymap("n", '<S-Tab>', ':bprev<CR>', silent)
 keymap("n", "gn", ":bn<CR>", silent)
 keymap("n", "gp", ":bp<CR>", silent)

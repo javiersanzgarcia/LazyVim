@@ -317,15 +317,6 @@ return {
                 current = 'DiffText'
             }
         }
-    }, {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        build = ":Copilot auth",
-        opts = {
-            suggestion = {enabled = true},
-            panel = {enabled = true},
-            filetypes = {markdown = true, help = true}
-        }
     }, -- messages, cmdline and the popupmenu
     {
         "folke/noice.nvim",
