@@ -1,11 +1,5 @@
 return {
-    -- Theme
-    {
-        "craftzdog/solarized-osaka.nvim",
-        lazy = true,
-        priority = 1000,
-        opts = function() return {transparent = true} end
-    }, {"nvim-lua/plenary.nvim"}, {
+    {"nvim-lua/plenary.nvim"}, {
         "nvim-tree/nvim-web-devicons",
         config = function()
             require("nvim-web-devicons").setup({default = true})
