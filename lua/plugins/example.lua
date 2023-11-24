@@ -203,11 +203,11 @@ return {
         "nvim-treesitter/nvim-treesitter",
         opts = {
             ensure_installed = {
-                "bash", "html", "javascript", "json", "lua", "markdown",
-                "markdown_inline", "python", "query", "regex", "tsx",
-                "typescript", "vim", "yaml", "astro", "cmake", "cpp", "css",
-                "fish", "gitignore", "go", "graphql", "http", "java", "php",
-                "rust", "scss", "sql", "svelte"
+                "astro", "bash", "cmake", "cpp", "css", "fish", "gitignore",
+                "go", "graphql", "html", "http", "java", "javascript", "json",
+                "lua", "markdown", "markdown_inline", "query", "regex", "rust",
+                "scss", "sql", "svelte", "tsx", "php", "python", "typescript",
+                "vim", "yaml"
             }
         }
     },
@@ -246,9 +246,9 @@ return {
         "williamboman/mason.nvim",
         opts = {
             ensure_installed = {
-                "stylua", "selene", "luacheck", "shellcheck", "shfmt",
-                "tailwindcss-language-server", "typescript-language-server",
-                "css-lsp", "flake8"
+                "css-lsp", "flake8", "luacheck", "selene", "shellcheck",
+                "shfmt", "stylua", "tailwindcss-language-server",
+                "typescript-language-server"
             }
         }
     }, -- Use <tab> for completion and snippets (supertab)
