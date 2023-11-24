@@ -18,9 +18,11 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
 keymap("n", "<leader>n", "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>",
        silent)
 
--- EOL & BOL: Deactivate for new navigation Q y E 60% layout
--- keymap("n", '<S-right>', '$', silent)
+-- BOL: Deactivate for new navigation FN + Q  or FN + H -> HOME
 -- keymap("n", '<S-left>', '^', silent)
+
+-- EOL: Deactivate for new navigation FN + E  or FN + L -> END
+-- keymap("n", '<S-right>', '$', silent)
 
 -- Move Lines
 
