@@ -1,7 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
--- https://www.lazyvim.org/keymaps
 local keymap = vim.keymap.set
 local silent = {silent = true}
 
@@ -59,7 +55,7 @@ keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", silent)
 keymap("n", "gr",
        "<cmd>lua vim.lsp.buf.references({ includeDeclaration = false })<CR>",
        silent)
-keymap("n", "<C-Space>", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
+keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 
 -- Telescope -> $ brew install ripgrep (engine search should be installed)
 

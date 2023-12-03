@@ -5,11 +5,6 @@ return {
             require("nvim-web-devicons").setup({default = true})
         end
     }, {
-        "rafamadriz/friendly-snippets",
-        config = function()
-            require("luasnip.loaders.from_vscode").lazy_load()
-        end
-    }, {
         "hrsh7th/nvim-cmp",
         version = false, -- last release is way too old
         event = "InsertEnter",
@@ -62,6 +57,11 @@ return {
                 experimental = {ghost_text = {hl_group = "CmpGhostText"}},
                 sorting = defaults.sorting
             }
+        end
+    }, {
+        "rafamadriz/friendly-snippets",
+        config = function()
+            require("luasnip.loaders.from_vscode").lazy_load()
         end
     }, {
         "neovim/nvim-lspconfig",
@@ -323,7 +323,7 @@ return {
 
             opts.presets.lsp_doc_border = true
         end
-    }, {"rcarriga/nvim-notify", opts = {timeout = 5000}}, -- animations
+    }, {"rcarriga/nvim-notify", opts = {timeout = 2000}}, -- animations
     {
         "echasnovski/mini.animate",
         event = "VeryLazy",
@@ -355,7 +355,7 @@ return {
         event = "VimEnter",
         opts = function(_, opts)
             local logo = [[
-██████╗ ██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗ 
+██████╗ ██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
 ██████╔╝██████╔╝███████║██║     █████╔╝ █████╗  ██████╔╝
 ██╔═══╝ ██╔══██╗██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
