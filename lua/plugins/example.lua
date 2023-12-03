@@ -1,19 +1,6 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
--- stylua: ignore
 if true then return {} end
 
--- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
---
--- In your plugin files, you can:
--- * add extra plugins
--- * disable/enabled LazyVim plugins
--- * override the configuration of LazyVim plugins
 return {
-    -- add gruvbox
-    {"ellisonleao/gruvbox.nvim"}, -- Configure LazyVim to load gruvbox
-    {"LazyVim/LazyVim", opts = {colorscheme = "gruvbox"}},
-
-    {"folke/tokyonight.nvim", lazy = true, opts = {style = "moon"}},
     -- Configure Git conflict plugin
     {"akinsho/git-conflict.nvim", version = "*", config = true},
     -- change trouble config
@@ -87,118 +74,7 @@ return {
             }
         }
     }, -- add tsserver and setup with typescript.nvim instead of lspconfig
-    -- lsp servers
-    {
-        "neovim/nvim-lspconfig",
-        opts = {
-            inlay_hints = {enabled = true},
-            ---@type lspconfig.options
-            servers = {
-                cssls = {},
-                tailwindcss = {
-                    root_dir = function(...)
-                        return require("lspconfig.util").root_pattern(".git")(
-                                   ...)
-                    end
-                },
-                tsserver = {
-                    root_dir = function(...)
-                        return require("lspconfig.util").root_pattern(".git")(
-                                   ...)
-                    end,
-                    single_file_support = false,
-                    settings = {
-                        typescript = {
-                            inlayHints = {
-                                includeInlayParameterNameHints = "literal",
-                                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                                includeInlayFunctionParameterTypeHints = true,
-                                includeInlayVariableTypeHints = false,
-                                includeInlayPropertyDeclarationTypeHints = true,
-                                includeInlayFunctionLikeReturnTypeHints = true,
-                                includeInlayEnumMemberValueHints = true
-                            }
-                        },
-                        javascript = {
-                            inlayHints = {
-                                includeInlayParameterNameHints = "all",
-                                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                                includeInlayFunctionParameterTypeHints = true,
-                                includeInlayVariableTypeHints = true,
-                                includeInlayPropertyDeclarationTypeHints = true,
-                                includeInlayFunctionLikeReturnTypeHints = true,
-                                includeInlayEnumMemberValueHints = true
-                            }
-                        }
-                    }
-                },
-                html = {},
-                yamlls = {settings = {yaml = {keyOrdering = false}}},
-                lua_ls = {
-                    -- enabled = false,
-                    single_file_support = true,
-                    settings = {
-                        Lua = {
-                            workspace = {checkThirdParty = false},
-                            completion = {
-                                workspaceWord = true,
-                                callSnippet = "Both"
-                            },
-                            misc = {
-                                parameters = {
-                                    -- "--log-level=trace",
-                                }
-                            },
-                            hint = {
-                                enable = true,
-                                setType = false,
-                                paramType = true,
-                                paramName = "Disable",
-                                semicolon = "Disable",
-                                arrayIndex = "Disable"
-                            },
-                            doc = {privateName = {"^_"}},
-                            type = {castNumberToInteger = true},
-                            diagnostics = {
-                                disable = {
-                                    "incomplete-signature-doc", "trailing-space"
-                                },
-                                -- enable = false,
-                                groupSeverity = {
-                                    strong = "Warning",
-                                    strict = "Warning"
-                                },
-                                groupFileStatus = {
-                                    ["ambiguity"] = "Opened",
-                                    ["await"] = "Opened",
-                                    ["codestyle"] = "None",
-                                    ["duplicate"] = "Opened",
-                                    ["global"] = "Opened",
-                                    ["luadoc"] = "Opened",
-                                    ["redefined"] = "Opened",
-                                    ["strict"] = "Opened",
-                                    ["strong"] = "Opened",
-                                    ["type-check"] = "Opened",
-                                    ["unbalanced"] = "Opened",
-                                    ["unused"] = "Opened"
-                                },
-                                unusedLocalExclude = {"_*"}
-                            },
-                            format = {
-                                enable = false,
-                                defaultConfig = {
-                                    indent_style = "space",
-                                    indent_size = "2",
-                                    continuation_indent_size = "2"
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            setup = {}
-        }
-    }, -- add more treesitter parsers
+    -- add more treesitter parsers
     {
         "nvim-treesitter/nvim-treesitter",
         opts = {
@@ -207,20 +83,9 @@ return {
                 "go", "graphql", "html", "http", "java", "javascript", "json",
                 "lua", "markdown", "markdown_inline", "query", "regex", "rust",
                 "scss", "sql", "svelte", "tsx", "php", "python", "typescript",
-                "vim", "yaml"
+                "tsx", "vim", "yaml"
             }
         }
-    },
-
-    -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
-    -- would overwrite `ensure_installed` with the new value.
-    -- If you'd rather extend the default config, use the code below instead:
-    {
-        "nvim-treesitter/nvim-treesitter",
-        opts = function(_, opts)
-            -- add tsx and treesitter
-            vim.list_extend(opts.ensure_installed, {"tsx", "typescript"})
-        end
     }, -- the opts function can also be used to change the default opts:
     {
         "nvim-lualine/lualine.nvim",
@@ -236,11 +101,6 @@ return {
             return { --[[add your custom lualine config here]] }
         end
     }, -- use mini.starter instead of alpha
-    {import = "lazyvim.plugins.extras.ui.mini-starter"},
-
-    -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-    {import = "lazyvim.plugins.extras.lang.json"},
-
     -- add any tools you want to have installed below
     {
         "williamboman/mason.nvim",
