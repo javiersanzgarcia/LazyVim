@@ -7,4 +7,4 @@ And added personal (and so lazy) config, special check over keymaps and plugins,
 
 Except when I need to code in Java for some reason this "IDE" and the motions from it, is undeliable more efficient and satisfactory than any other thing
 
-- WIP: GIthub Copilot would like to be excluded from LSP (as VSCode way)
+- WIP: GIthub Copilot would like to be excluded from CMP (as VSCode way)
