@@ -1,5 +1,3 @@
-if true then return {} end
-
 return {
     -- Configure Git conflict plugin
     {
