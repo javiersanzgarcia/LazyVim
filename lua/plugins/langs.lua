@@ -3,7 +3,7 @@ return {
     -- change trouble config
     {
         "folke/trouble.nvim",
-        enabled = false,
+        dependencies = {"nvim-tree/nvim-web-devicons"},
         -- opts will be merged with the parent spec
         opts = {use_diagnostic_signs = true}
     }, -- change some telescope options and a keymap to browse plugin files
