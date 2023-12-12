@@ -20,7 +20,7 @@ return {
             opts.mapping = vim.tbl_extend("force", opts.mapping, {
                 -- ["<CR>"] = vim.NIL,
 
-                ["<Tab>"] = cmp.mapping(function(fallback)
+                ["<Tab>"] = cmp.mapping(function()
                     -- if cmp.visible() then
                     --     cmp.confirm({
                     --         behavior = cmp.ConfirmBehavior.Insert,
