@@ -18,27 +18,9 @@ return {
             local cmp = require("cmp")
 
             opts.mapping = vim.tbl_extend("force", opts.mapping, {
-                -- ["<CR>"] = vim.NIL,
-
-                ["<Tab>"] = cmp.mapping(function()
-                    -- if cmp.visible() then
-                    --     cmp.confirm({
-                    --         behavior = cmp.ConfirmBehavior.Insert,
-                    --         select = true
-                    --     })
-                    -- else
+                ["<Tab>"] = cmp.mapping(function(fallback)
                     if require("copilot.suggestion").is_visible() then
                         require("copilot.suggestion").accept()
-                        -- elseif luasnip.expand_or_locally_jumpable() then
-                        --     luasnip.expand_or_jump()
-                        -- elseif has_words_before() then
-                        --     cmp.complete()
-                    end
-                end, {"i", "s"}),
-
-                ["<S-Tab>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_prev_item()
                     elseif luasnip.jumpable(-1) then
                         luasnip.jump(-1)
                     else

@@ -9,11 +9,6 @@ keymap("n", "<Leader>tv", ":botright vnew <Bar> :terminal<cr>")
 keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
 -- keymap("n", "<Leader>qq", ":q!<cr>", silent)
 
--- Toggle Tree
-
-keymap("n", "<leader>n", "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>",
-       silent)
-
 -- BOL: Deactivate for new navigation FN + Q  or FN + H -> HOME
 -- keymap("n", '<S-left>', '^', silent)
 
@@ -57,7 +52,7 @@ keymap("n", "gr",
        silent)
 keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 
--- Telescope -> $ brew install ripgrep (engine search should be installed)
+-- Telescope
 
 keymap("n", "<leader>ff",
        "<CMD>lua require('telescope.builtin').find_files()<CR>")
@@ -101,3 +96,6 @@ keymap("n", "<C-a>", "gg<S-v>G")
 
 -- New tab
 keymap("n", "te", ":tabedit<CR>")
+
+-- ['<C-e>'] = cmp.mapping.abort(),
+-- brew install ripgrep (engine search should be installed)
