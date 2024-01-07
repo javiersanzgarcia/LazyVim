@@ -16,8 +16,8 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
 -- keymap("n", '<S-right>', '$', silent)
 
 -- Move Lines
-keymap("v", "<S-down>", ":m '>+1<CR>gv=gv", silent)
-keymap("v", "<S-up>", ":m '<-2<CR>gv=gv", silent)
+keymap("v", "<A-down>", ":m '>+1<CR>gv=gv", silent)
+keymap("v", "<A-up>", ":m '<-2<CR>gv=gv", silent)
 
 -- Move around splits
 keymap("n", "<A-left>", "<C-w>h", silent)
@@ -41,25 +41,14 @@ keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 
 -- Telescope
 
-keymap("n", "<leader>ff", "<CMD>lua require('telescope.builtin').find_files()<CR>")
+-- By default <leader><leader>
+-- keymap("n", "<leader>ff", "<CMD>lua require('telescope.builtin').find_files()<CR>")
 
 keymap("n", "<leader>fg", "<CMD>lua require('telescope.builtin').live_grep()<CR>")
-
-keymap("n", "<leader>fc", "<CMD>lua require('telescope.builtin').live_grep({grep_open_files=true})<CR>")
-
-keymap("n", "<leader>fb", "<CMD>lua require('telescope.builtin').buffers()<CR>")
-
-keymap("n", "<leader>fn", "<CMD>lua require('telescope.builtin').help_tags()<CR>")
-
 keymap("n", "<leader>fw", "<CMD>lua require('telescope.builtin').grep_string()<CR>")
 
-keymap(
-  "n",
-  "<Leader>pf",
-  "<CMD>lua require('plugins.telescope').project_files({ default_text = vim.fn.expand('<cword>'), initial_mode = 'normal' })<CR>"
-)
-
-keymap("n", "<Leader>pw", "<CMD>lua require('telescope.builtin').grep_string({ initial_mode = 'normal' })<CR>")
+keymap("n", "<leader>fb", "<CMD>lua require('telescope.builtin').buffers()<CR>")
+keymap("n", "<leader>fn", "<CMD>lua require('telescope.builtin').help_tags()<CR>")
 
 -- Buffers
 -- keymap("n", '<Tab>', ':bnext<CR>', silent)
@@ -81,5 +70,4 @@ keymap("n", "<C-a>", "gg<S-v>G")
 -- New tab
 keymap("n", "te", ":tabedit<CR>")
 
--- ['<C-e>'] = cmp.mapping.abort(),
 -- brew install ripgrep (engine search should be installed)
