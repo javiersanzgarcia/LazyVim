@@ -20,6 +20,7 @@ return {
   },
   config = function()
     require("java").setup()
+    ---@diagnostic disable-next-line: missing-fields
     require("lspconfig").jdtls.setup({})
   end,
 }

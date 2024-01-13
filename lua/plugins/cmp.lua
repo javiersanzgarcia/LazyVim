@@ -1,5 +1,4 @@
 return {
-
   -- nvim-cmp configuration so to not preselect completion and require tab to select
   {
     "hrsh7th/nvim-cmp",

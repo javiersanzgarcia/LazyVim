@@ -69,5 +69,3 @@ keymap("n", "<C-a>", "gg<S-v>G")
 
 -- New tab
 keymap("n", "te", ":tabedit<CR>")
-
--- brew install ripgrep (engine search should be installed)

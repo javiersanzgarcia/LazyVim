@@ -1,3 +1,4 @@
+---@diagnostic disable: inject-field
 local enable_ai = function()
   local current_dir = vim.fn.getcwd()
   local home_dir = os.getenv("HOME") or os.getenv("USERPROFILE")
