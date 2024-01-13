@@ -34,19 +34,15 @@ keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", s
 keymap("v", "<leader>fd", "<cmd>'<.'>lua vim.lsp.buf.range_formatting()<CR>", silent)
 
 -- Go to Definition / References / Code Action
-
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", silent)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references({ includeDeclaration = false })<CR>", silent)
 keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 
 -- Telescope
-
 -- By default <leader><leader>
 -- keymap("n", "<leader>ff", "<CMD>lua require('telescope.builtin').find_files()<CR>")
-
 keymap("n", "<leader>fg", "<CMD>lua require('telescope.builtin').live_grep()<CR>")
 keymap("n", "<leader>fw", "<CMD>lua require('telescope.builtin').grep_string()<CR>")
-
 keymap("n", "<leader>fb", "<CMD>lua require('telescope.builtin').buffers()<CR>")
 keymap("n", "<leader>fn", "<CMD>lua require('telescope.builtin').help_tags()<CR>")
 
