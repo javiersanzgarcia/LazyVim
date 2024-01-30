@@ -15,15 +15,16 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
 -- EOL: Deactivate for new navigation FN + E  or FN + L -> END
 -- keymap("n", '<S-right>', '$', silent)
 
--- Move Lines
-keymap("v", "<A-down>", ":m '>+1<CR>gv=gv", silent)
-keymap("v", "<A-up>", ":m '<-2<CR>gv=gv", silent)
-
 -- Move around splits
 keymap("n", "<A-left>", "<C-w>h", silent)
 keymap("n", "<A-down>", "<C-w>j", silent)
 keymap("n", "<A-up>", "<C-w>k", silent)
 keymap("n", "<A-right>", "<C-w>l", silent)
+
+keymap("t", "<A-left>", "<C-w>h", silent)
+keymap("t", "<A-down>", "<C-w>j", silent)
+keymap("t", "<A-up>", "<C-w>k", silent)
+keymap("t", "<A-right>", "<C-w>l", silent)
 
 -- Split window
 keymap("n", "ss", ":split<Return>", silent)
@@ -47,8 +48,8 @@ keymap("n", "<leader>fb", "<CMD>lua require('telescope.builtin').buffers()<CR>")
 keymap("n", "<leader>fn", "<CMD>lua require('telescope.builtin').help_tags()<CR>")
 
 -- Buffers
--- keymap("n", '<Tab>', ':bnext<CR>', silent)
-keymap("n", "<S-Tab>", ":bprev<CR>", silent)
+keymap("n", "<S-j>", ":bnext<CR>", silent)
+keymap("n", "<S-k>", ":bprev<CR>", silent)
 keymap("n", "gn", ":bn<CR>", silent)
 keymap("n", "gp", ":bp<CR>", silent)
 keymap("n", "<S-q>", ":BufferClose<CR>", silent)
