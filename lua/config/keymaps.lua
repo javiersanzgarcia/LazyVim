@@ -16,15 +16,10 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
 -- keymap("n", '<S-right>', '$', silent)
 
 -- Move around splits
-keymap("n", "<A-left>", "<C-w>h", silent)
-keymap("n", "<A-down>", "<C-w>j", silent)
-keymap("n", "<A-up>", "<C-w>k", silent)
-keymap("n", "<A-right>", "<C-w>l", silent)
-
-keymap("t", "<A-left>", "<C-w>h", silent)
-keymap("t", "<A-down>", "<C-w>j", silent)
-keymap("t", "<A-up>", "<C-w>k", silent)
-keymap("t", "<A-right>", "<C-w>l", silent)
+keymap({ "n", "t" }, "<A-left>", "<C-w>h", silent)
+keymap({ "n", "t" }, "<A-down>", "<C-w>j", silent)
+keymap({ "n", "t" }, "<A-up>", "<C-w>k", silent)
+keymap({ "n", "t" }, "<A-right>", "<C-w>l", silent)
 
 -- Split window
 keymap("n", "ss", ":split<Return>", silent)
