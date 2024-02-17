@@ -56,7 +56,6 @@ return {
         "shfmt",
         "stylua",
         "tailwindcss-language-server",
-        "typescript-language-server",
       },
     },
   },
@@ -69,5 +68,10 @@ return {
         go_to_definition = "<leader>dx", -- default '<leader>dx'
       },
     },
+  },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
   },
 }

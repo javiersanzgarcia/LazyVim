@@ -30,9 +30,8 @@ keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", s
 keymap("v", "<leader>fd", "<cmd>'<.'>lua vim.lsp.buf.range_formatting()<CR>", silent)
 
 -- Go to Definition / References / Code Action
-keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", silent)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition(on)<CR>", silent)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references({ includeDeclaration = false })<CR>", silent)
-keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", silent)
 
 -- Telescope
 -- By default <leader><leader>
