@@ -2,18 +2,12 @@ local keymap = vim.keymap.set
 local silent = { silent = true }
 
 --  Pracker Maps
-keymap("n", "<Leader>q", ":q!<cr>")
-keymap("n", "<Leader>w", ":w<cr>")
-keymap("n", "<Leader>x", ":x<cr>")
-keymap("n", "<Leader>tv", ":botright vnew <Bar> :terminal<cr>")
-keymap("n", "<Leader>th", ":botright new <Bar> :terminal<cr>")
--- keymap("n", "<Leader>qq", ":q!<cr>", silent)
-
--- BOL: Deactivate for new navigation FN + Q  or FN + H -> HOME
--- keymap("n", '<S-left>', '^', silent)
-
--- EOL: Deactivate for new navigation FN + E  or FN + L -> END
--- keymap("n", '<S-right>', '$', silent)
+keymap("n", "<leader>qq", ":qa!<CR>", silent)
+keymap("n", "<Leader>q", ":q!<CR>", silent)
+keymap("n", "<Leader>w", ":w<CR>", silent)
+keymap("n", "<Leader>x", ":x<CR>", silent)
+keymap("n", "<Leader>tv", ":botright vnew <Bar> :terminal<CR>", silent)
+keymap("n", "<Leader>th", ":botright new <Bar> :terminal<CR>", silent)
 
 -- Move around splits
 keymap({ "n", "t" }, "<A-left>", "<C-w>h", silent)
