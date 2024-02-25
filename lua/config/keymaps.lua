@@ -40,5 +40,7 @@ keymap("n", "dw", 'vb"_d')
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G")
 
--- New tab
-keymap("n", "te", ":tabedit<CR>")
+-- REMINDER: This is a custom keymap for the plugin `better TS Errors`
+
+-- toggle = "<leader>dd", -- default '<leader>dd'
+-- go_to_definition = "<leader>dx", -- default '<leader>dx'

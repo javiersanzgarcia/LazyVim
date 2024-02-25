@@ -8,11 +8,16 @@ This repository is a continuos WIP, Optimizing how works LazyVim for me.
 
 Should be installed for a correct funcionality:
 
-- Lua
-- NVM
-- Node (more than 18)
-- GVM
-- go1.21
-- Python (and virtual environment)
-- rigrep (Is in all package managing)
+- ripgrep
 - lazygit
+- xclip
+- NVM && Node (more than 18) for copilot apart Mason
+
+And next programing languages and act like IDE:
+
+- Web development (HTML, CSS, Javascript, Typescript)
+- Lua
+- go1.21
+- Rust & Cargo
+- Python (and virtual environment)
+- Java (Is not necessary installation for the plugin)
