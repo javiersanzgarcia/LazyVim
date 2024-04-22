@@ -21,3 +21,18 @@ And next programing languages and act like IDE:
 - Rust & Cargo
 - Python (and virtual environment)
 - Java (Is not necessary installation for the plugin)
+
+## Known Issues
+
+
+If you see that kind of error:
+
+```
+    ● dashboard-nvim 0.53ms  VimEnter
+        error: cannot update the ref 'refs/remotes/origin/master': unable to append to '.git/logs/refs/remotes/origin/master': Permiso denegado
+        Desde https://github.com/nvimdev/dashboard-nvim
+         ! 6813009..6d06924  master     -> origin/master  (no es posible actualizar el ref local)
+```
+
+You should go to ~/.local/share/nvim/lazy/ and look for the name of the plugin and remove .git directory from each plugin
+
