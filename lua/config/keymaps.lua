@@ -19,16 +19,9 @@ keymap({ "n", "t" }, "<A-right>", "<C-w>l", silent)
 keymap("n", "ss", ":split<Return>", silent)
 keymap("n", "sv", ":vsplit<Return>", silent)
 
--- Format piece
-keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", silent)
-keymap("v", "<leader>fd", "<cmd>'<.'>lua vim.lsp.buf.range_formatting()<CR>", silent)
-
 -- Buffers
-keymap("n", "<S-j>", ":bnext<CR>", silent)
-keymap("n", "<S-k>", ":bprev<CR>", silent)
 keymap("n", "gn", ":bn<CR>", silent)
 keymap("n", "gp", ":bp<CR>", silent)
-keymap("n", "<S-q>", ":BufferClose<CR>", silent)
 
 -- Increment/decrement
 keymap("n", "+", "<C-a>")
