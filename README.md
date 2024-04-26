@@ -11,16 +11,22 @@ Should be installed for a correct funcionality:
 - ripgrep
 - lazygit
 - xclip
+- gcc
 - NVM && Node (more than 18) for copilot apart Mason
 
-And next programing languages and act like IDE:
+Curent version working for:
 
-- Web development (HTML, CSS, Javascript, Typescript)
-- Lua
-- go1.21
-- Rust & Cargo
-- Python (and virtual environment)
+- Web development (HTML, CSS, Javascript, Typescript, React, Tailwind)
 - Java (Is not necessary installation for the plugin)
+- Lua
+
+In this current version, these languages are deactivated (but is possible to activate in lua/config/lazy.lua)
+
+- Docker
+- go1.21
+- Python (and virtual environment)
+- Rust & Cargo
+- Yaml
 
 ## Known Issues
 
@@ -35,4 +41,3 @@ If you see that kind of error:
 ```
 
 You should go to ~/.local/share/nvim/lazy/ and look for the name of the plugin and remove .git directory from each plugin
-

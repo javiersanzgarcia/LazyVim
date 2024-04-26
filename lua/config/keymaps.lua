@@ -21,7 +21,6 @@ keymap("n", "sv", ":vsplit<Return>", silent)
 
 -- Buffers
 keymap("n", "gn", ":bn<CR>", silent)
-keymap("n", "gp", ":bp<CR>", silent)
 
 -- Increment/decrement
 keymap("n", "+", "<C-a>")
@@ -33,6 +32,8 @@ keymap("n", "dw", 'vb"_d')
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G")
 
+-- Zen Mode
+keymap("n", "<leader>z", "<cmd>ZenMode<cr>", silent)
 -- REMINDER: This is a custom keymap for the plugin `better TS Errors`
 
 -- toggle = "<leader>dd", -- default '<leader>dd'
