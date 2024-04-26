@@ -18,10 +18,6 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      opts = {
-        colorscheme = "tokyonight",
-        news = { lazyvim = true, neovim = true },
-      },
     }, -- import/override with your plugins
     { import = "lazyvim.plugins.extras.coding.yanky" }, -- Improve yank/paste
     { import = "lazyvim.plugins.extras.dap.core" },
@@ -55,20 +51,15 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  dev = { path = "~/.ghq/github.com" },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
-    cache = {
-      enabled = true,
-      -- disable_events = {},
-    },
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip", -- "matchit",
         -- "matchparen",
-        "netrwPlugin",
-        "rplugin",
+        -- "netrwPlugin",
+        -- "rplugin",
         "tarPlugin",
         "tohtml",
         "tutor",
@@ -76,10 +67,4 @@ require("lazy").setup({
       },
     },
   },
-  ui = { custom_keys = {
-    ["<localleader>d"] = function(plugin)
-      dd(plugin)
-    end,
-  } },
-  debug = false,
 })
