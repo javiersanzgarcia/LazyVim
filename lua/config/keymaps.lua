@@ -24,7 +24,7 @@ keymap("n", "ss", ":split<Return>", silent)
 keymap("n", "sv", ":vsplit<Return>", silent)
 
 -- Buffers
-keymap("n", "gn", ":bn<CR>", silent)
+keymap("n", "<S-Tab>", ":bn<CR>", silent)
 
 -- Increment/decrement
 keymap("n", "+", "<C-a>")
