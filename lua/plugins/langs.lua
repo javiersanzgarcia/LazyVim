@@ -46,6 +46,7 @@ return {
         "selene",
         "shellcheck",
         "stylua",
+        "typescript-language-server",
         "vue-language-server",
       },
     },
