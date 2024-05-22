@@ -51,6 +51,14 @@ keymap("n", "<leader>sp", "<cmd>lua require('telescope').extensions.live_grep_ar
   desc = "Grep with params",
 })
 
+-- Delete other buffers
+keymap(
+  "n",
+  "<leader>bo",
+  '<Esc>:%bdelete|edit #|normal`"<Return>',
+  { desc = "Delete other buffers but keep the current one" }
+)
+
 -- REMINDER: This is a custom keymap for the plugin `better TS Errors`
 
 -- toggle = "<leader>dd", -- default '<leader>dd'
