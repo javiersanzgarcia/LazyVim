@@ -7,10 +7,10 @@ keymap("n", "<Leader>q", ":q!<CR>", silent)
 keymap("n", "<Leader>w", ":w<CR>", silent)
 keymap("n", "<Leader>x", ":x<CR>", silent)
 keymap("n", "<Leader>tv", ":botright vnew <Bar> :terminal<CR>", {
-  desc = "Open Vertical Terminal",
+	desc = "Open Vertical Terminal",
 })
 keymap("n", "<Leader>th", ":botright new <Bar> :terminal<CR>", {
-  desc = "Open Horizontal Terminal",
+	desc = "Open Horizontal Terminal",
 })
 
 -- Move around splits
@@ -45,18 +45,18 @@ keymap("n", "gr", "<cmd>lua vim.lsp.buf.references({ includeDeclaration = false 
 
 -- Some Telescope additional keymaps
 keymap("n", "<leader>sf", "<CMD>lua require('telescope.builtin').live_grep({grep_open_files=true})<CR>", {
-  desc = "Grep in open files",
+	desc = "Grep in open files",
 })
 keymap("n", "<leader>sp", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {
-  desc = "Grep with params",
+	desc = "Grep with params",
 })
 
 -- Delete other buffers
 keymap(
-  "n",
-  "<leader>bo",
-  '<Esc>:%bdelete|edit #|normal`"<Return>',
-  { desc = "Delete other buffers but keep the current one" }
+	"n",
+	"<leader>bo",
+	'<Esc>:%bdelete|edit #|normal`"<Return>',
+	{ desc = "Delete others buffers except the current one" }
 )
 
 -- REMINDER: This is a custom keymap for the plugin `better TS Errors`
