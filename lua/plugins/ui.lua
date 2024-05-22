@@ -1,6 +1,10 @@
 ---@diagnostic disable: undefined-field
 return {
-
+  -- Disable Tabs:
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+  },
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
