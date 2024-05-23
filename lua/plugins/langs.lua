@@ -51,6 +51,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"css-lsp",
+				"eslint-lsp",
 				"luacheck",
 				"selene",
 				"shellcheck",
@@ -80,5 +81,22 @@ return {
 		config = function()
 			require("template-string").setup()
 		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			inlay_hints = { enabled = false },
+			---@type lspconfig.options
+			servers = {
+				eslint = {
+					settings = {
+						workingDirectory = {
+							mode = "location",
+							value = "/",
+						},
+					},
+				},
+			},
+		},
 	},
 }
