@@ -12,7 +12,7 @@ Should be installed for a correct funcionality:
 - lazygit
 - xclip
 - gcc
-- NVM && Node (more than 18) for copilot apart Mason
+- NVM && Node (more than 18) 
 
 Curent version working for:
 
@@ -41,3 +41,15 @@ If you see that kind of error:
 ```
 
 You should go to ~/.local/share/nvim/lazy/ and look for the name of the plugin and remove .git directory from each plugin
+
+## Reset IDE
+If you need to reset to scratch the whole configuration, without edit LazyExtras:
+
+```
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+```
+
+and restart the editor
+
