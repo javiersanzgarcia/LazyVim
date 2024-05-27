@@ -82,21 +82,4 @@ return {
 			require("template-string").setup()
 		end,
 	},
-	{
-		"neovim/nvim-lspconfig",
-		opts = {
-			inlay_hints = { enabled = false },
-			---@type lspconfig.options
-			servers = {
-				eslint = {
-					settings = {
-						workingDirectory = {
-							mode = "location",
-							value = "/",
-						},
-					},
-				},
-			},
-		},
-	},
 }
