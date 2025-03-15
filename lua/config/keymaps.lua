@@ -13,6 +13,10 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<CR>", {
 	desc = "Open Horizontal Terminal",
 })
 
+--  Move Lines:
+-- <A-j>	Move Down	n, i, v
+-- <A-k>	Move Up	n, i, v
+
 -- Move around splits
 keymap({ "n", "t" }, "<A-left>", "<C-w>h", silent)
 keymap({ "n", "t" }, "<A-down>", "<C-w>j", silent)
