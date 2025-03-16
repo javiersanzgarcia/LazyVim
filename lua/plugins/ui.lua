@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-field
 return {
 	-- Disable Tabs:
 	{
@@ -114,7 +113,7 @@ return {
 			opts.presets.lsp_doc_border = true
 		end,
 	},
-	{ "rcarriga/nvim-notify", opts = { timeout = 2000 } }, -- animations
+	{ "rcarriga/nvim-notify", opts = { timeout = 1000 } }, -- animations
 	{
 		"echasnovski/mini.animate",
 		event = "VeryLazy",
@@ -136,6 +135,7 @@ return {
 	{
 		"simrat39/symbols-outline.nvim",
 		cmd = "SymbolsOutline",
+		opts = { relative_width = true },
 		keys = {
 			{ "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
 		},
@@ -146,15 +146,6 @@ return {
 		-- optionally, override the default options:
 		config = function()
 			require("tailwindcss-colorizer-cmp").setup({ color_square_width = 2 })
-		end,
-	},
-	-- Lazy
-	{
-		"vague2k/huez.nvim",
-		-- if you want registry related features, uncomment this
-		-- import = "huez-manager.import"
-		config = function()
-			require("huez").setup({})
 		end,
 	},
 }
