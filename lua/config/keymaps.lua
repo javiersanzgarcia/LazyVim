@@ -13,10 +13,6 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<CR>", {
 	desc = "Open Horizontal Terminal",
 })
 
---  Move Lines:
--- <A-j>	Move Down	n, i, v
--- <A-k>	Move Up	n, i, v
-
 -- Move around splits
 keymap({ "n", "t" }, "<A-left>", "<C-w>h", silent)
 keymap({ "n", "t" }, "<A-down>", "<C-w>j", silent)
@@ -67,3 +63,15 @@ keymap(
 
 -- toggle = "<leader>dd", -- default '<leader>dd'
 -- go_to_definition = "<leader>dx", -- default '<leader>dx'
+
+-- Move Lines
+keymap("n", "<S-up>", ":m .-2<CR>==gi", silent)
+keymap("n", "<S-down>", ":m .+1<CR>==gi", silent)
+keymap("i", "<S-up>", "<Esc>:m .-2<CR>==gi", silent)
+keymap("i", "<S-down>", "<Esc>:m .+1<CR>==gi", silent)
+keymap("v", "<S-up>", ":m ':m .-2<CR>==gi", silent)
+keymap("v", "<S-down>", ":m '>+1<CR>gv=gv", silent)
+
+--  Move Lines in Linux:
+-- <A-j>	Move Down	n, i, v
+-- <A-k>	Move Up	n, i, v
