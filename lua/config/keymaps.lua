@@ -61,6 +61,23 @@ keymap(
 	{ desc = "Delete others buffers except the current one" }
 )
 
+-- Refactoring
+keymap({ "x", "n" }, "<leader>rv", function()
+	require("refactoring").debug.print_var()
+end, { desc = "Refactoring Debug Print Variable" })
+
+keymap("n", "<leader>rs", function()
+	require("refactoring").debug.print_statement()
+end, { desc = "Refactoring Debug Print Statement" })
+
+keymap("n", "<leader>rr", function()
+	require("refactoring").debug.print_statement(true)
+end, { desc = "Refactoring Debug Print Statement (Recursive)" })
+
+keymap("n", "<leader>rc", function()
+	require("refactoring").debug.cleanup({})
+end, { desc = "Refactoring Debug Cleanup" })
+
 -- REMINDER: This is a custom keymap for the plugin `better TS Errors`
 
 -- toggle = "<leader>dd", -- default '<leader>dd'
