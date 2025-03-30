@@ -58,7 +58,7 @@ return {
 			sidebar_header = {
 				enabled = true, -- true, false to enable/disable the header
 				align = "center", -- left, center, right for title
-				rounded = false, 
+				rounded = false,
 			},
 			input = {
 				prefix = "> ",
