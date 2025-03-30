@@ -13,6 +13,8 @@ keymap("n", "<Leader>th", ":botright new <Bar> :terminal<CR>", {
 	desc = "Open Horizontal Terminal",
 })
 
+keymap({ "n", "i", "v" }, "jj", "<Esc>", silent)
+
 -- Move around splits
 keymap({ "n", "t" }, "<A-left>", "<C-w>h", silent)
 keymap({ "n", "t" }, "<A-down>", "<C-w>j", silent)
