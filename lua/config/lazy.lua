@@ -19,7 +19,7 @@ require("lazy").setup({
 		{
 			"LazyVim/LazyVim",
 			opts = {
-				colorscheme = "nord",
+				colorscheme = "dracula",
 			},
 			import = "lazyvim.plugins",
 		}, -- import/override with your plugins

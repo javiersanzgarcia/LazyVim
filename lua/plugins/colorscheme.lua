@@ -33,4 +33,15 @@ return {
 			}
 		end,
 	},
+	{
+		"maxmx03/dracula.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = function()
+			return {
+				transparent = true,
+				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+			}
+		end,
+	},
 }
