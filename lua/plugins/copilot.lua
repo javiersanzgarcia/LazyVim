@@ -19,5 +19,4 @@ return {
 			}
 		end,
 	},
-	{ "giuxtaposition/blink-cmp-copilot", enable = false },
 }
