@@ -8,10 +8,15 @@ return {
 	-- 	"akinsho/bufferline.nvim",
 	-- 	enabled = false, -- Disable this plugin
 	-- },
+	-- { "yetone/avante.nvim", enabled = false },
 	-- {
-
+	-- 	"supermaven-inc/supermaven-nvim",
+	-- 	enabled = false,
+	-- },
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		enabled = false,
 	},
+
+	{ "zbirenbaum/copilot.lua", enabled = false },
 }
