@@ -20,4 +20,5 @@ return {
 
 	{ "zbirenbaum/copilot.lua", enabled = false },
 	{ "yetone/avante.nvim", enabled = false },
+	{ "nvim-java/nvim-java", enabled = false },
 }
