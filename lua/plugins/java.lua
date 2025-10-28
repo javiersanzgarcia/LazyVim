@@ -10,7 +10,7 @@ return {
     "mfussenegger/nvim-dap",
     "nvim-java/nvim-java-refactor",
     {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
       opts = {
         registries = {
           "github:nvim-java/mason-registry",
