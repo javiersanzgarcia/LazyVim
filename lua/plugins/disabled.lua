@@ -8,7 +8,6 @@ return {
 	-- 	"akinsho/bufferline.nvim",
 	-- 	enabled = false, -- Disable this plugin
 	-- },
-	{ "yetone/avante.nvim", enabled = false },
 	-- {
 	-- 	"supermaven-inc/supermaven-nvim",
 	-- 	enabled = false,
