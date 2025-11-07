@@ -30,15 +30,4 @@ return {
 			},
 		},
 	},
-	-- template string support ${}
-	{
-		"rxtsel/template-string.nvim",
-		event = "BufReadPost",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("template-string").setup()
-		end,
-	},
 }

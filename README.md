@@ -8,7 +8,7 @@ This repository is a continuous WIP, Optimizing how works LazyVim for me.
 
 Current version working for:
 
-- Web development (HTML, CSS, Javascript, Typescript, React,Angular, VUE, Astro, Tailwind)
+- Web development (HTML, CSS, Javascript, Typescript, React, VUE, Astro, Tailwind)
 - Lua
 - Yaml
 
