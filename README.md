@@ -9,15 +9,17 @@ This repository is a continuous WIP, Optimizing how works LazyVim for me.
 Current version working for:
 
 - Web development (HTML, CSS, Javascript, Typescript, React, VUE, Astro, Tailwind)
+- go
 - Lua
 - Yaml
 
 In this current version, these languages are deactivated (but is possible to activate in lua/config/lazy.lua)
 
 - Docker
-- go1.21
 - Python (and virtual environment)
 - Rust & Cargo
+- Angular
+- Java
 
 ## Known Issues
 
@@ -43,3 +45,7 @@ mv ~/.cache/nvim{,.bak}
 ```
 
 and restart the editor
+
+## IA Model
+
+I use Supermaven plugin as copilot assistant and for chat assistant Copilot (Avante plugin). Should be use the shortcut <leader>am to change the model used by default and <leader>aa to ask questions or request changes.
